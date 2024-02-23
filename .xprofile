@@ -1,0 +1,14 @@
+# Disable beep
+xset -b
+
+# Start compositor for fancy visual
+picom -f &
+
+# Unclutter - hide the mouse cursor
+unclutter  --jitter 10 --ignore-scrolling --start-hidden --fork
+
+# Nitrogen for wallpaper
+nitrogen --restore 
+
+# Start qtile windown manager
+qtile start
