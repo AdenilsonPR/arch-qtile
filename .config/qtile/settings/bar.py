@@ -76,7 +76,8 @@ screens = [
                 widget.Clock(format = "%d/%m/%Y"),
                 
                 widget.TextBox(text = "󰥔", fontsize = 14, foreground = foreground_inactive),
-                widget.Clock(format = "%I:%M %p"),
+                widget.Clock(format = "%H:%M"),
+                widget.Spacer(length = 4),
             ],
             **bar_theme
         ),
