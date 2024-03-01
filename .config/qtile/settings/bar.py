@@ -44,30 +44,38 @@ screens = [
                 widget.Sep(size_percent = 75, linewidth = 1, foreground = decoration_focus),
                
                 widget.Spacer(length = 4),
-                widget.Prompt(prompt = "󰣇  " , fontsize = 12),
+                widget.Prompt(prompt = "󰣇  " , fontsize = 12, foreground = foreground_normal),
                 
                 widget.Spacer(length = bar.STRETCH),
-                widget.TextBox(text = "󰍛", fontsize = 18, foreground = foreground_normal),
-                widget.Memory(update_interval = 5),
+                widget.TextBox(text = "󰍛", fontsize = 18, foreground = foreground_inactive),
+                widget.Spacer(length = 6),
+                widget.CPU(format = "{load_percent}%", foreground = foreground_normal, update_interval = 5),
+                
+                widget.Spacer(length = 4),
+                widget.Sep(size_percent = 75, linewidth = 1, foreground = decoration_focus),
+                widget.Spacer(length = 4),
+                
+                widget.TextBox(text = "󰘚", fontsize = 16, foreground = foreground_inactive),
+                widget.Memory(foreground = foreground_normal, update_interval = 5),
                 widget.Spacer(length = bar.STRETCH),
 
                 widget.Systray(icon_size = 18),
                 widget.Spacer(length = 4),
                 
                 widget.Sep(size_percent = 75, linewidth = 1, foreground = decoration_focus),
-                widget.TextBox(text = " ", fontsize = 14, foreground = foreground_normal),
+                widget.TextBox(text = " ", fontsize = 14, foreground = foreground_inactive),
                 widget.Net(format = "{down:.0f}{down_suffix} ↓↑ {up:.0f}{up_suffix}", foreground = foreground_normal, update_interval = 5),
                 
                 widget.Sep(size_percent = 75, linewidth = 1, foreground = decoration_focus),
-                widget.TextBox(text = " ", fontsize = 13, foreground = foreground_normal),
+                widget.TextBox(text = " ", fontsize = 13, foreground = foreground_inactive),
                 widget.Battery(foreground = foreground_normal, format = "{percent:2.0%}", show_short_text = False),
                 
                 widget.Sep(size_percent = 75, linewidth = 1, foreground = decoration_focus),
                 
-                widget.TextBox(text = "", foreground = foreground_normal),
+                widget.TextBox(text = "", foreground = foreground_inactive),
                 widget.Clock(format = "%d/%m/%Y"),
                 
-                widget.TextBox(text = "󰥔", fontsize = 14, foreground = foreground_normal),
+                widget.TextBox(text = "󰥔", fontsize = 14, foreground = foreground_inactive),
                 widget.Clock(format = "%I:%M %p"),
             ],
             **bar_theme
