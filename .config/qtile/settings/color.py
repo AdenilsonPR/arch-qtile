@@ -1,5 +1,5 @@
-background_normal = "#27272a"
-background_alternative = "#1b1b1d"
+background_normal = "#1b1b1d"
+background_alternative = "#27272a"
 decoration_focus = "#37373a"
 decoration_hover = "#aa2227"
 foreground_inactive = "#7f8c8d"

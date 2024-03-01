@@ -5,5 +5,3 @@ super = "mod4"
 alt = "mod1"
 file_manager = "thunar"
 terminal = guess_terminal()
-active_windows = "rofi -show"
-application_launcher = "rofi -show drun"

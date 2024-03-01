@@ -2,7 +2,6 @@ from .color import *
 from libqtile import bar, widget
 from libqtile.config import Screen
 from libqtile.lazy import lazy
-from .default import application_launcher
 
 bar_theme = {
     "size": 28,
@@ -20,6 +19,7 @@ group_box_theme = {
     "urgent_text": foreground_positive,
     "urgent_alert_method": "text",
     "fontsize": 16,
+    "disable_drag": True,
 }
 
 widget_defaults = dict(
@@ -34,7 +34,7 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.TextBox(text = "󰷐", fontsize = 20, padding = 8, foreground = foreground_normal, mouse_callbacks={'Button1': lazy.spawn(application_launcher)}),
+                widget.TextBox(text = "󰣇", fontsize = 20, padding = 8, foreground = foreground_normal, mouse_callbacks={'Button1': lazy.spawncmd()}),
                 widget.Spacer(length = 4),
                
                 widget.Sep(size_percent = 75, linewidth = 1, foreground = decoration_focus),
