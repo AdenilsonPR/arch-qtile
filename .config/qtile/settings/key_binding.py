@@ -28,4 +28,7 @@ keys = [
     Key([super, "control"], "right", lazy.screen.next_group(), desc="Move to the group on the right"),
     Key([super, "control"], "left", lazy.screen.prev_group(), desc="Move to the group on the left"),
     Key([super], "e", lazy.spawn(file_manager), desc="File manager"), 
+    Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle"), desc="Mute volume"), 
+    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 sset Master 1- unmute"), desc="Volume -"), 
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 0 sset Master 1+ unmute"), desc="Volume +"), 
 ]

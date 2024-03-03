@@ -61,6 +61,10 @@ screens = [
 
                 widget.Systray(icon_size = 18),
                 widget.Spacer(length = 4),
+
+                widget.Sep(size_percent = 75, linewidth = 1, foreground = decoration_focus),
+                widget.TextBox(text = " ", fontsize = 14, foreground = foreground_inactive),
+                widget.Volume(), 
                 
                 widget.Sep(size_percent = 75, linewidth = 1, foreground = decoration_focus),
                 widget.TextBox(text = " ", fontsize = 14, foreground = foreground_inactive),
