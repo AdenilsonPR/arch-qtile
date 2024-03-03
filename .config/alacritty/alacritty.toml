@@ -1,0 +1,25 @@
+import = ["/home/adenilsonpr/.config/alacritty/colors.toml", "/home/adenilsonpr/.config/alacritty/fonts.toml"]
+live_config_reload = true
+
+[cursor]
+unfocused_hollow = false
+
+[cursor.style]
+blinking = "On"
+shape = "beam"
+
+[env]
+TERM = "alacritty"
+
+[window]
+decorations = "full"
+dynamic_title = true
+startup_mode = "Windowed"
+
+[window.dimensions]
+columns = 82
+lines = 25
+
+[window.padding]
+x = 8
+y = 8
