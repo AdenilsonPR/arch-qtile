@@ -7,8 +7,8 @@ picom -f &
 # Unclutter - hide the mouse cursor
 unclutter  --jitter 10 --ignore-scrolling --start-hidden --fork
 
-# Nitrogen for wallpaper
-nitrogen --restore 
+# feh for wallpaper
+feh --no-fehbg --bg-scale "$HOME/.config/qtile/images/wallpaper.png"
 
 # Start qtile windown manager
 qtile start
