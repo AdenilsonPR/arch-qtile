@@ -10,8 +10,10 @@ sudo pacman -S vim --noconfirm
 sudo pacman -S picom --noconfirm
 sudo pacman -S unclutter --noconfirm
 sudo pacman -S feh --noconfirm
-sudo pacman -S nerd-fonts --noconfirm
+sudo pacman -S ttf-firacode-nerd --noconfirm
+sudo pacman -S otf-firamono-nerd --noconfirm
 sudo pacman -S zsh --noconfirm
+sudo pacman -S alsa-utils --noconfirm
 
 
 echo "dotfiles"
@@ -25,3 +27,4 @@ cp arch-qtile/.zshrc .
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"

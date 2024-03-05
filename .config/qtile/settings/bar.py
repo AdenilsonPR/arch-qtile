@@ -23,7 +23,7 @@ group_box_theme = {
 }
 
 widget_defaults = dict(
-    font="Hack Nerd Font bold",
+    font="FiraMono Nerd Font",
     fontsize=12,
     padding=4,
 )
@@ -63,7 +63,7 @@ screens = [
                 widget.Spacer(length = 4),
 
                 widget.Sep(size_percent = 75, linewidth = 1, foreground = decoration_focus),
-                widget.TextBox(text = " ", fontsize = 14, foreground = foreground_inactive),
+                widget.TextBox(text = " ", fontsize = 15, foreground = foreground_inactive),
                 widget.Volume(), 
                 
                 widget.Sep(size_percent = 75, linewidth = 1, foreground = decoration_focus),
