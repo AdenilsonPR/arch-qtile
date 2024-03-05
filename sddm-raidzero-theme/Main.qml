@@ -48,7 +48,6 @@ Rectangle {
                 width: parent.width
                 height: 200
                 color: "transparent"
-                radius: 4
                 
                 Column {
                     anchors.centerIn: parent
@@ -57,16 +56,15 @@ Rectangle {
                     Row {
                         TextBox {
                             id: user_entry
-                            radius: 3
                             width: 250
                             anchors.verticalCenter: parent.verticalCenter
                             text: userModel.lastUser
                             font.pixelSize: 16
-                            color: Qt.rgba(0, 0, 0, 0.2)
-                            borderColor: "transparent"
-                            focusColor: Qt.rgba(0, 0, 0, 0.25)
-                            hoverColor: Qt.rgba(0, 0, 0, 0.2)
-                            textColor: "white"
+                            color: "#27272a"
+                            borderColor: "#37373a"
+                            focusColor: "#aa2227"
+                            hoverColor: "#aa2227"
+                            textColor: "#fcfdfd"
                             KeyNavigation.backtab: session; KeyNavigation.tab: pw_entry
                         }                   
                     }
@@ -74,15 +72,14 @@ Rectangle {
                     Row {
                         PasswordBox {
                             id: pw_entry
-                            radius: 3
                             width: 250
                             anchors.verticalCenter: parent.verticalCenter
                             font.pixelSize: 15
-                            color: Qt.rgba(0, 0, 0, 0.2)
-                            borderColor: "transparent"
-                            focusColor: Qt.rgba(0, 0, 0, 0.25)
-                            hoverColor: Qt.rgba(0, 0, 0, 0.2)
-                            textColor: "white"
+                            color: "#27272a"
+                            borderColor: "#37373a"
+                            focusColor: "#aa2227"
+                            hoverColor: "#aa2227"
+                            textColor: "#fcfdfd"
                             focus: true
                             KeyNavigation.backtab: user_entry; KeyNavigation.tab: loginButton
 
@@ -100,12 +97,12 @@ Rectangle {
                         
                         Button {
                             id: loginButton
-                            radius: 3
                             text: textConstants.login
                             width: 250
-                            color: Qt.rgba(0, 0, 0, 0.2)
-                            activeColor: Qt.rgba(0, 0, 0, 0.2)
-                            pressedColor: Qt.rgba(0, 0, 0, 0.25)
+                            color: "#27272a"
+                            activeColor: "#27272a"
+                            pressedColor: "#1b1b1d"
+                            textColor: "#fcfdfd"
                             font.pixelSize: 15
                             font.bold: false
                             onClicked: sddm.login(user_entry.text, pw_entry.text, session.index)
@@ -133,10 +130,12 @@ Rectangle {
             anchors.left: parent.left
             anchors.verticalCenter: parent.verticalCenter
             width: 160
-            color: Qt.rgba(0, 0, 0, 0.2)
-            dropDownColor: Qt.rgba(0, 0, 0, 0.2)
-            borderColor: "transparent"
-            textColor: "white"
+            color: "#27272a"
+            dropDownColor: "#27272a"
+            borderColor: "#37373a"
+            textColor: "#fcfdfd"
+            hoverColor: "#aa2227"
+            focusColor: "#aa2227"
             arrowIcon: "images/arrow-down.png"
             arrowColor: "transparent"
             model: sessionModel
@@ -151,9 +150,10 @@ Rectangle {
             anchors.right: shutdown.left
             anchors.rightMargin: 10
             text: textConstants.reboot
-            color: Qt.rgba(0, 0, 0, 0.2)
-            pressedColor: Qt.rgba(0, 0, 0, 0.25)
-            activeColor: Qt.rgba(0, 0, 0, 0.2)
+            color: "#27272a"
+            activeColor: "#27272a"
+            pressedColor: "#1b1b1d"
+            textColor: "#fcfdfd"
             font.pixelSize: 13
             font.bold: false
             radius: 3
@@ -166,9 +166,10 @@ Rectangle {
             anchors.verticalCenter: parent.verticalCenter
             anchors.right: parent.right
             text: textConstants.shutdown
-            color: Qt.rgba(0, 0, 0, 0.2)
-            pressedColor: Qt.rgba(0, 0, 0, 0.25)
-            activeColor: Qt.rgba(0, 0, 0, 0.2)
+            color: "#27272a"
+            activeColor: "#27272a"
+            pressedColor: "#1b1b1d"
+            textColor: "#fcfdfd"
             font.pixelSize: 13
             font.bold: false
             radius: 3

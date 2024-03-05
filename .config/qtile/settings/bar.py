@@ -23,7 +23,7 @@ group_box_theme = {
 }
 
 widget_defaults = dict(
-    font="Hack Nerd Font bold",
+    font="FiraMono Nerd Font",
     fontsize=12,
     padding=4,
 )
@@ -63,8 +63,8 @@ screens = [
                 widget.Spacer(length = 4),
 
                 widget.Sep(size_percent = 75, linewidth = 1, foreground = decoration_focus),
-                widget.TextBox(text = " ", fontsize = 14, foreground = foreground_inactive),
-                widget.Volume(), 
+                widget.TextBox(text = " ", fontsize = 15, foreground = foreground_inactive),
+                widget.Volume(foreground = foreground_normal), 
                 
                 widget.Sep(size_percent = 75, linewidth = 1, foreground = decoration_focus),
                 widget.TextBox(text = " ", fontsize = 14, foreground = foreground_inactive),
@@ -77,10 +77,10 @@ screens = [
                 widget.Sep(size_percent = 75, linewidth = 1, foreground = decoration_focus),
                 
                 widget.TextBox(text = "", foreground = foreground_inactive),
-                widget.Clock(format = "%d/%m/%Y"),
+                widget.Clock(format = "%d/%m/%Y", foreground = foreground_normal),
                 
                 widget.TextBox(text = "󰥔", fontsize = 14, foreground = foreground_inactive),
-                widget.Clock(format = "%H:%M"),
+                widget.Clock(format = "%H:%M", foreground = foreground_normal),
                 widget.Spacer(length = 4),
             ],
             **bar_theme
