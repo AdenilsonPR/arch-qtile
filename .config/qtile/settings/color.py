@@ -1,4 +1,4 @@
-background_normal = "#282828"
+background_normal = "#292828"
 background_alternative = "#1d2021"
 decoration_focus = "#3c3836"
 decoration_hover = "#ea6962"
