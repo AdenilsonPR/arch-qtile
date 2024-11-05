@@ -2,6 +2,8 @@ from .color import *
 from libqtile import bar, widget
 from libqtile.config import Screen
 from libqtile.lazy import lazy
+from .widgets.dmenu import dmenu
+
 
 bar_theme = {
     "size": 28,
@@ -10,6 +12,7 @@ bar_theme = {
     "border_color": decoration_focus,
     "border_width": 1,
 }
+
 
 group_box_theme = {
     "active": foreground_normal,
@@ -22,19 +25,22 @@ group_box_theme = {
     "disable_drag": True,
 }
 
+
 widget_defaults = dict(
     font="FiraMono Nerd Font",
     fontsize=12,
     padding=4,
 )
 
+
 extension_defaults = widget_defaults.copy()
+
 
 screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.TextBox(text = "󰣇", fontsize = 20, padding = 8, foreground = foreground_normal, mouse_callbacks={'Button1': lazy.spawncmd()}),
+                widget.TextBox(text = "󰣇", fontsize = 20, padding = 8, foreground = foreground_normal, mouse_callbacks={'Button1': dmenu}),
                 widget.Spacer(length = 4),
                
                 widget.Sep(size_percent = 75, linewidth = 1, foreground = decoration_focus),

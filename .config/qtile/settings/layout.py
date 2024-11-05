@@ -9,6 +9,7 @@ layout_theme = {
     "margin": 8,
 }
 
+
 layouts = [
     layout.MonadTall(**layout_theme),
 ]

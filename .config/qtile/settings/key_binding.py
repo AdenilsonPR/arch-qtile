@@ -1,6 +1,7 @@
 from libqtile.config import Key
 from libqtile.lazy import lazy
 from .default import *
+from .widgets.dmenu import dmenu
 
 
 keys = [
@@ -24,10 +25,11 @@ keys = [
     Key([], "f11", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
     Key([super, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([super, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-    Key([super], "space", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    Key([super], "x", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([super, "control"], "right", lazy.screen.next_group(), desc="Move to the group on the right"),
     Key([super, "control"], "left", lazy.screen.prev_group(), desc="Move to the group on the left"),
     Key([super], "e", lazy.spawn(file_manager), desc="File manager"), 
+    Key([super], "space", dmenu, desc="The dmenu command to be launched"), 
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle"), desc="Mute volume"), 
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 sset Master 1- unmute"), desc="Volume -"), 
     Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 0 sset Master 1+ unmute"), desc="Volume +"), 
