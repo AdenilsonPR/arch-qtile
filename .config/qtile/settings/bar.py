@@ -2,15 +2,13 @@ from .color import *
 from libqtile import bar, widget
 from libqtile.config import Screen
 from libqtile.lazy import lazy
-from .widgets.dmenu import dmenu
-
 
 bar_theme = {
     "size": 28,
     "margin": [8, 8, 0, 8],
     "background": background_normal,
     "border_color": decoration_focus,
-    "border_width": 1,
+    "border_width": 2,
 }
 
 
@@ -40,7 +38,7 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.TextBox(text = "󰣇", fontsize = 20, padding = 8, foreground = foreground_normal, mouse_callbacks={'Button1': dmenu}),
+                widget.TextBox(text = "󰣇", fontsize = 20, padding = 8, foreground = foreground_normal, mouse_callbacks={'Button1': lazy.spawn("rofi -show drun")}),
                 widget.Spacer(length = 4),
                
                 widget.Sep(size_percent = 75, linewidth = 1, foreground = decoration_focus),

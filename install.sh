@@ -5,7 +5,14 @@ sudo pacman -S python-pip --noconfirm
 pip install psutil --break-system-packages
 
 
+echo "yay"
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+
 echo "install packages"
+sudo pacman -Syyu
 sudo pacman -S vim --noconfirm
 sudo pacman -S picom --noconfirm
 sudo pacman -S unclutter --noconfirm
@@ -14,6 +21,16 @@ sudo pacman -S ttf-firacode-nerd --noconfirm
 sudo pacman -S otf-firamono-nerd --noconfirm
 sudo pacman -S zsh --noconfirm
 sudo pacman -S alsa-utils --noconfirm
+sudo pacman -S qtile-extras
+sudo pacman -S thunar
+sudo pacman -S lightdm-gtk-greeter-settings
+sudo pacman -S lxappearance
+sudo pacman -S git
+sudo pacman -S go
+sudo pacman -S steam
+yay gruvbox-material
+yay gruvbox-material-icon-theme-git
+yay -S visual-studio-code-bin
 
 
 echo "dotfiles"

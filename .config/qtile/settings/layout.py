@@ -1,5 +1,5 @@
 from libqtile import layout
-from .color import decoration_hover, decoration_focus, foreground_neutral
+from .color import decoration_hover, decoration_focus
 
 
 layout_base_theme = {

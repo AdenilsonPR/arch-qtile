@@ -1,6 +1,4 @@
-import = ["/home/adenilsonpr/.config/alacritty/colors.toml", "/home/adenilsonpr/.config/alacritty/fonts.toml"]
-live_config_reload = true
-
+﻿
 [cursor]
 unfocused_hollow = false
 
@@ -23,3 +21,7 @@ lines = 25
 [window.padding]
 x = 8
 y = 8
+
+[general]
+live_config_reload = true
+import = ["colors.toml", "fonts.toml"]
