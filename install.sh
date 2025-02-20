@@ -1,47 +1,43 @@
 #!/bin/bash
 
-echo "install pip"
-sudo pacman -S python-pip --noconfirm
-pip install psutil --break-system-packages
-
-
 echo "yay"
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
 
-echo "install packages"
-sudo pacman -Syyu
-sudo pacman -S vim --noconfirm
-sudo pacman -S picom --noconfirm
-sudo pacman -S unclutter --noconfirm
-sudo pacman -S feh --noconfirm
-sudo pacman -S ttf-firacode-nerd --noconfirm
-sudo pacman -S otf-firamono-nerd --noconfirm
-sudo pacman -S zsh --noconfirm
-sudo pacman -S alsa-utils --noconfirm
-sudo pacman -S qtile-extras
-sudo pacman -S thunar
-sudo pacman -S lightdm-gtk-greeter-settings
-sudo pacman -S lxappearance
-sudo pacman -S git
-sudo pacman -S go
-sudo pacman -S steam
-yay gruvbox-material
-yay gruvbox-material-icon-theme-git
-yay -S visual-studio-code-bin
+echo "install pip"
+yay -S python-pip --noconfirm
+pip install psutil --break-system-packages
 
+
+echo "install packages"
+yay -Syyu
+yay -S vim --noconfirm
+yay -S picom --noconfirm
+yay -S unclutter --noconfirm
+yay -S feh --noconfirm
+yay -S ttf-firacode-nerd --noconfirm
+yay -S otf-firamono-nerd --noconfirm
+yay -S zsh --noconfirm
+yay -S alsa-utils --noconfirm
+yay -S ranger --noconfirm
+yay -S lightdm-gtk-greeter-settings --noconfirm
+yay -S lxappearance --noconfirm
+yay -S git --noconfirm
+yay -S go --noconfirm
+yay -S steam --noconfirm
+yay -S rofi --noconfirm
+yay -S qtile-extras --noconfirm
+yay -S visual-studio-code-bin --noconfirm
+yay -S zen-browser-bin --noconfirm
 
 echo "dotfiles"
-git clone https://github.com/AdenilsonPR/arch-qtile.git
-cp -r -f /arch-qtile/.config/* .config/
-cp /arch-qtile/.xprofile .
-
+cp -r -f .config/* .config/
+cp .xprofile .
 
 echo "oh my zsh"
-cp arch-qtile/.zshrc .
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+cp arch-qtile/.zshrc .
